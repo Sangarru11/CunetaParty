@@ -4,36 +4,105 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e967d06a-0c1a-424b-bbca-e179c52c262c" name="Changes" comment="" />
+    <list default="true" id="e967d06a-0c1a-424b-bbca-e179c52c262c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/connection.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/Sangarru11/CunetaParty/Executable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/Sangarru11/CunetaParty/Utils/XMLManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/Sangarru11/CunetaParty/View/Controller.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/Sangarru11/CunetaParty/View/MainController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/Sangarru11/CunetaParty/View/Scenes.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/Sangarru11/CunetaParty/View/View.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/Sangarru11/CunetaParty/model/Connection/ConnectionMariaDB.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/Sangarru11/CunetaParty/model/Connection/ConnectionProperties.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/Sangarru11/CunetaParty/model/DAO/DAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/Sangarru11/CunetaParty/model/DAO/clientesDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/Sangarru11/CunetaParty/model/DAO/empleadosDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/Sangarru11/CunetaParty/model/DAO/empleadosServiciosDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/Sangarru11/CunetaParty/model/DAO/reservasDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/Sangarru11/CunetaParty/model/DAO/serviciosDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/Sangarru11/CunetaParty/model/entity/clientes.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/Sangarru11/CunetaParty/model/entity/empleados.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/Sangarru11/CunetaParty/model/entity/empleados_servicios.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/Sangarru11/CunetaParty/model/entity/reservas.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/Sangarru11/CunetaParty/model/entity/servicios.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/github/Sangarru11/CunetaParty/Main.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/Sangarru11/CunetaParty/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/Sangarru11/CunetaParty/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/Sangarru11/CunetaParty/PrimaryController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/Sangarru11/CunetaParty/SecondaryController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/github/Sangarru11/CunetaParty/primary.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/github/Sangarru11/CunetaParty/secondary.fxml" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="FxmlFile" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectColorInfo"><![CDATA[{
   "associatedIndex": 2
 }]]></component>
   <component name="ProjectId" id="2pCSwrm1WTY4duDe4cg69F2UAtI" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.Executable.executor": "Run",
     "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "com.codeium.enabled": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "ComienzoProyecto",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/santi/Escritorio/2DAM-Francisco-De-Los-Rios/ACDA-MariCarmen/1Trimestre/CunetaParty",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\santi\Escritorio\2DAM-Francisco-De-Los-Rios\ACDA-MariCarmen\1Trimestre\CunetaParty" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Executable" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="com.github.Sangarru11.CunetaParty.Executable" />
+      <module name="CunetaParty" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -42,11 +111,22 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1732268807776</updated>
-      <workItem from="1732268808882" duration="3000" />
+      <workItem from="1732268808882" duration="2346000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
