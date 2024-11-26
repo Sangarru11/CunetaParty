@@ -4,6 +4,7 @@ import java.util.Objects;
 
 public class clientes {
     private int id_cliente;
+    private String dni;
     private String nombre;
     private String telefono;
     private String modelo_vehiculo;
@@ -12,8 +13,9 @@ public class clientes {
     public clientes() {
     }
 
-    public clientes(int id_cliente, String nombre, String telefono, String modelo_vehiculo, String matricula) {
+    public clientes(int id_cliente, String nombre, String dni,String telefono, String modelo_vehiculo, String matricula) {
         this.id_cliente = id_cliente;
+        this.dni = dni;
         this.nombre = nombre;
         this.telefono = telefono;
         this.modelo_vehiculo = modelo_vehiculo;
@@ -26,6 +28,14 @@ public class clientes {
 
     public void setId_cliente(int id_cliente) {
         this.id_cliente = id_cliente;
+    }
+
+    public String getDni() {
+        return dni;
+    }
+
+    public void setDni(String dni) {
+        this.dni = dni;
     }
 
     public String getNombre() {
@@ -65,18 +75,19 @@ public class clientes {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         clientes clientes = (clientes) o;
-        return id_cliente == clientes.id_cliente && Objects.equals(nombre, clientes.nombre) && Objects.equals(telefono, clientes.telefono) && Objects.equals(modelo_vehiculo, clientes.modelo_vehiculo) && Objects.equals(matricula, clientes.matricula);
+        return id_cliente == clientes.id_cliente && Objects.equals(dni, clientes.dni) && Objects.equals(nombre, clientes.nombre) && Objects.equals(telefono, clientes.telefono) && Objects.equals(modelo_vehiculo, clientes.modelo_vehiculo) && Objects.equals(matricula, clientes.matricula);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id_cliente, nombre, telefono, modelo_vehiculo, matricula);
+        return Objects.hash(id_cliente, dni, nombre, telefono, modelo_vehiculo, matricula);
     }
 
     @Override
     public String toString() {
         return "clientes{" +
                 "id_cliente=" + id_cliente +
+                ", dni='" + dni + '\'' +
                 ", nombre='" + nombre + '\'' +
                 ", telefono='" + telefono + '\'' +
                 ", modelo_vehiculo='" + modelo_vehiculo + '\'' +
