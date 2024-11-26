@@ -118,30 +118,11 @@ public class empleadosDAO implements DAO<empleados,String>{
 
     @Override
     public empleados findByName(String key) {
-        empleados result = null;
-        try (PreparedStatement pst = connection.prepareStatement(FINDBYNAME)){
-            pst.setString(1, key);
-            try (ResultSet res = pst.executeQuery()){
-                if (res.next()){
-                    empleados e = new empleados();
-                    e.setId_empleado(res.getInt("id_empleado"));
-                    e.setNombre(res.getString("Nombre"));
-                    e.setDNI(res.getString("DNI"));
-                    e.setEspecialidad(res.getString("Especialidad"));
-                result = e;
-                }
-            }
-        }catch (SQLException e){
-            e.printStackTrace();
-        }
-        return result;
+        return null;
     }
 
     @Override
     public void close() throws IOException {
 
-    }
-    public static empleadosDAO build(){
-        return new empleadosDAO();
     }
 }
