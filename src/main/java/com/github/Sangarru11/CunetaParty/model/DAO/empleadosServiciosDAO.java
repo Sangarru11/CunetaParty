@@ -1,6 +1,7 @@
 package com.github.Sangarru11.CunetaParty.model.DAO;
 
 import com.github.Sangarru11.CunetaParty.model.Connection.ConnectionMariaDB;
+import com.github.Sangarru11.CunetaParty.model.entity.empleados;
 import com.github.Sangarru11.CunetaParty.model.entity.empleados_servicios;
 
 import java.io.IOException;
@@ -42,6 +43,12 @@ public class empleadosServiciosDAO implements DAO <empleados_servicios,String>{
         }
         return entity;
     }
+
+    @Override
+    public empleados adminManage(empleados entity) throws SQLException {
+        return null;
+    }
+
     public void EliminarAsignacion(int ID_servicio, int ID_empleado) throws SQLException{
         try(PreparedStatement pst = connection.prepareStatement(DELETE)) {
             pst.setInt(1, ID_servicio);

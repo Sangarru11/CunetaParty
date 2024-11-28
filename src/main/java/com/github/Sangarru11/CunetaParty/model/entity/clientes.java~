@@ -9,19 +9,17 @@ public class clientes {
     private String telefono;
     private String modelo_vehiculo;
     private String matricula;
-    private String password;
 
     public clientes() {
     }
 
-    public clientes(int id_cliente, String nombre, String dni,String telefono, String modelo_vehiculo, String matricula, String password) {
+    public clientes(int id_cliente, String nombre, String dni,String telefono, String modelo_vehiculo, String matricula) {
         this.id_cliente = id_cliente;
         this.dni = dni;
         this.nombre = nombre;
         this.telefono = telefono;
         this.modelo_vehiculo = modelo_vehiculo;
         this.matricula = matricula;
-        this.password = password;
     }
 
     public int getId_cliente() {
@@ -72,25 +70,17 @@ public class clientes {
         this.matricula = matricula;
     }
 
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         clientes clientes = (clientes) o;
-        return id_cliente == clientes.id_cliente && Objects.equals(dni, clientes.dni) && Objects.equals(nombre, clientes.nombre) && Objects.equals(telefono, clientes.telefono) && Objects.equals(modelo_vehiculo, clientes.modelo_vehiculo) && Objects.equals(matricula, clientes.matricula) && Objects.equals(password, clientes.password);
+        return id_cliente == clientes.id_cliente && Objects.equals(dni, clientes.dni) && Objects.equals(nombre, clientes.nombre) && Objects.equals(telefono, clientes.telefono) && Objects.equals(modelo_vehiculo, clientes.modelo_vehiculo) && Objects.equals(matricula, clientes.matricula);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id_cliente, dni, nombre, telefono, modelo_vehiculo, matricula, password);
+        return Objects.hash(id_cliente, dni, nombre, telefono, modelo_vehiculo, matricula);
     }
 
     @Override
@@ -102,7 +92,6 @@ public class clientes {
                 ", telefono='" + telefono + '\'' +
                 ", modelo_vehiculo='" + modelo_vehiculo + '\'' +
                 ", matricula='" + matricula + '\'' +
-                ", password='" + password + '\'' +
                 '}';
     }
 }

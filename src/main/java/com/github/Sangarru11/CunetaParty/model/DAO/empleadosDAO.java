@@ -12,12 +12,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class empleadosDAO implements DAO<empleados,String>{
-    private static final String FINDBYDNI = "SELECT c.ID, c.Nombre, c.DNI, c.Especialidad FROM empleados AS c WHERE c.Nombre=?";
-    private static final String FINDBYID = "SELECT c.id_empleado, c.Nombre, c.DNI, c.Especialidad FROM empleados AS c WHERE c.id_empleado = ?";
-    private static final String FINDBYNAME = "SELECT c.ID, c.Nombre, c.DNI, c.Especialidad FROM empleados AS c WHERE c.Nombre=?";
-    private static final String INSERT = "INSERT INTO empleados (Nombre, DNI, Especialidad) VALUES (?, ?, ?)";
-    private static final String UPDATE = "UPDATE empleados SET name=? WHERE id_empleado=?";
-    private static final String DELETE = "DELETE FROM empleados WHERE id_empleado=?";
+    private static final String FINDBYID = "SELECT e.ID, e.Nombre, e.DNI, e.Especialidad, e.password, e.Admin FROM empleados AS e WHERE e.ID = ?";
+    private static final String FINDBYNAME = "SELECT e.ID, e.Nombre, e.DNI, e.Especialidad, e.password, e.Admin FROM empleados AS e WHERE e.Nombre=?";
+    private static final String INSERT = "INSERT INTO empleados (Nombre, DNI, Especialidad, password, Admin) VALUES (?, ?, ?, ?, ?)";
+    private static final String UPDATE = "UPDATE empleados SET name=? WHERE ID=?";
+    private static final String UPDATE_ADMIN_STATUS = "UPDATE empleados SET Admin=? WHERE ID=?";
+    private static final String ADMIN = "SELECT e.ID, e.dni, e.name, e.password, e.Admin FROM empleados AS e WHERE e.Admin=?";
+    private static final String DELETE = "DELETE FROM empleados WHERE ID=?";
     private Connection connection;
 
     public empleadosDAO() {
@@ -32,9 +33,12 @@ public class empleadosDAO implements DAO<empleados,String>{
                 empleados isInDataBase = findByDNI(dni);
                 if (isInDataBase == null) {
                     try (PreparedStatement pst = connection.prepareStatement(INSERT)) {
-                        pst.setString(1, dni);
-                        pst.setString(2, entity.getNombre());
+                        pst.setString(2, dni);
+                        pst.setString(1, entity.getNombre());
                         pst.setString(3, entity.getEspecialidad());
+                        pst.setString(4, entity.getPassword());
+                        pst.setBoolean(5, entity.isAdmin());
+
                         pst.executeUpdate();
                     } catch (SQLException e) {
                         e.printStackTrace();
@@ -42,7 +46,9 @@ public class empleadosDAO implements DAO<empleados,String>{
                 } else {
                     try (PreparedStatement pst = connection.prepareStatement(UPDATE)) {
                         pst.setString(1, entity.getNombre());
-                        pst.setInt(2, entity.getId_empleado());
+                        pst.setString(2, entity.getPassword());
+                        pst.setInt(4, entity.getId_empleado());
+                        pst.setBoolean(3, entity.isAdmin());
                     } catch (SQLException e) {
                         e.printStackTrace();
                     }
@@ -66,6 +72,20 @@ public class empleadosDAO implements DAO<empleados,String>{
     }
 
     @Override
+    public empleados adminManage(empleados entity) throws SQLException {
+        if (entity != null) {
+            try (PreparedStatement pst = connection.prepareStatement(ADMIN)) {
+                pst.setBoolean(1, entity.isAdmin());
+                pst.executeUpdate();
+                entity.setAdmin(!entity.isAdmin());
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+        return entity;
+    }
+
+    @Override
     public empleados findById(String key) {
         empleados result = null;
         try (PreparedStatement pst = connection.prepareStatement(FINDBYID)){
@@ -73,10 +93,12 @@ public class empleadosDAO implements DAO<empleados,String>{
             try(ResultSet res = pst.executeQuery()){
                 if (res.next()){
                     empleados e = new empleados();
-                    e.setId_empleado(res.getInt("id_empleado"));
+                    e.setId_empleado(res.getInt("ID"));
                     e.setDNI(res.getString("DNI"));
                     e.setNombre(res.getString("Nombre"));
                     e.setEspecialidad(res.getString("Especialidad"));
+                    e.setPassword(res.getString("password"));
+                    e.setAdmin(res.getBoolean("Admin"));
                     result = e;
                 }
             }
@@ -93,10 +115,12 @@ public class empleadosDAO implements DAO<empleados,String>{
             try(ResultSet res = pst.executeQuery()){
                 while (res.next()){
                     empleados e = new empleados();
-                    e.setId_empleado(res.getInt("id_empleado"));
+                    e.setId_empleado(res.getInt("ID"));
                     e.setDNI(res.getString("DNI"));
                     e.setNombre(res.getString("Nombre"));
                     e.setEspecialidad(res.getString("Especialidad"));
+                    e.setPassword(res.getString("password"));
+                    e.setAdmin(res.getBoolean("Admin"));
                     result.add(e);
                 }
             }
@@ -124,10 +148,12 @@ public class empleadosDAO implements DAO<empleados,String>{
             try (ResultSet res = pst.executeQuery()){
                 if (res.next()){
                     empleados e = new empleados();
-                    e.setId_empleado(res.getInt("id_empleado"));
+                    e.setId_empleado(res.getInt("ID"));
                     e.setNombre(res.getString("Nombre"));
                     e.setDNI(res.getString("DNI"));
                     e.setEspecialidad(res.getString("Especialidad"));
+                    e.setPassword(res.getString("password"));
+                    e.setAdmin(res.getBoolean("Admin"));
                 result = e;
                 }
             }
@@ -140,6 +166,13 @@ public class empleadosDAO implements DAO<empleados,String>{
     @Override
     public void close() throws IOException {
 
+    }
+    public void updateAdminStatus(int employeeId, boolean isAdmin) throws SQLException {
+        try (PreparedStatement pst = connection.prepareStatement(UPDATE_ADMIN_STATUS)) {
+            pst.setBoolean(1, isAdmin);
+            pst.setInt(2, employeeId);
+            pst.executeUpdate();
+        }
     }
     public static empleadosDAO build(){
         return new empleadosDAO();

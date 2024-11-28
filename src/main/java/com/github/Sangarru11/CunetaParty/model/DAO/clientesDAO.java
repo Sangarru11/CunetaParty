@@ -2,6 +2,7 @@ package com.github.Sangarru11.CunetaParty.model.DAO;
 
 import com.github.Sangarru11.CunetaParty.model.Connection.ConnectionMariaDB;
 import com.github.Sangarru11.CunetaParty.model.entity.clientes;
+import com.github.Sangarru11.CunetaParty.model.entity.empleados;
 
 import java.io.IOException;
 import java.sql.Connection;
@@ -12,10 +13,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class clientesDAO implements DAO <clientes,String>{
-    private static final String FINDBYDNI = "SELECT c.ID, c.Nombre, c.Telefono, c.Modelo_Vehiculo, c.Matricula FROM clientes AS c WHERE c.Nombre=?";
-    private static final String FINDBYID = "SELECT c.id_cliente, c.dni, c.Nombre, c.Telefono, c.Modelo_Vehiculo, c.Matricula FROM clientes AS c WHERE c.id_cliente = ?";
-    private static final String FINDBYNAME = "SELECT c.ID, c.Nombre, c.Telefono, c.Modelo_Vehiculo, c.Matricula FROM clientes AS c WHERE c.Nombre=?";
-    private static final String INSERT = "INSERT INTO clientes (dni, Nombre, Telefono, Modelo_Vehiculo, Matricula) VALUES (?, ?, ?, ?, ?)";
+    private static final String FINDBYDNI = "SELECT c.ID, c.dni, c.Nombre, c.Telefono, c.Modelo_Vehiculo, c.Matricula, c.password FROM clientes AS c WHERE c.dni=?";
+    private static final String FINDBYID = "SELECT c.ID, c.dni, c.Nombre, c.Telefono, c.Modelo_Vehiculo, c.Matricula, c.password FROM clientes AS c WHERE c.id_cliente = ?";
+    private static final String FINDBYNAME = "SELECT c.ID, c.dni, c.Nombre, c.Telefono, c.Modelo_Vehiculo, c.Matricula, c.password FROM clientes AS c WHERE c.Nombre=?";
+    private static final String INSERT = "INSERT INTO clientes (dni, Nombre, Telefono, Modelo_Vehiculo, Matricula, password) VALUES (?, ?, ?, ?, ?,?)";
     private static final String UPDATE = "UPDATE clientes SET name=? WHERE id_cliente=?";
     private static final String DELETE = "DELETE FROM clientes WHERE id_cliente=?";
     private Connection connection;
@@ -37,14 +38,16 @@ public class clientesDAO implements DAO <clientes,String>{
                         pst.setString(3, entity.getTelefono());
                         pst.setString(4, entity.getModelo_vehiculo());
                         pst.setString(5, entity.getMatricula());
+                        pst.setString(6, entity.getPassword());
                         pst.executeUpdate();
                     } catch (SQLException e) {
                         e.printStackTrace();
                     }
                 } else {
                     try (PreparedStatement pst = connection.prepareStatement(UPDATE)) {
-                        pst.setString(1, entity.getNombre());
+                        pst.setString(1, entity.getDni());
                         pst.setInt(2, entity.getId_cliente());
+                        pst.setString(3, entity.getNombre());
                     } catch (SQLException e) {
                         e.printStackTrace();
                     }
@@ -68,6 +71,11 @@ public class clientesDAO implements DAO <clientes,String>{
     }
 
     @Override
+    public empleados adminManage(empleados entity) throws SQLException {
+        return null;
+    }
+
+    @Override
     public clientes findById(String key) {
         clientes result = null;
         try(PreparedStatement pst = connection.prepareStatement(FINDBYID)){
@@ -75,12 +83,13 @@ public class clientesDAO implements DAO <clientes,String>{
             try (ResultSet res = pst.executeQuery()){
                 if (res.next()){
                     clientes c = new clientes();
-                    c.setId_cliente(res.getInt("id_cliente"));
+                    c.setId_cliente(res.getInt("ID"));
                     c.setDni(res.getString("dni"));
                     c.setNombre(res.getString("name"));
                     c.setTelefono(res.getString("telefono"));
-                    c.setModelo_vehiculo(res.getString("modelo_vehiculo"));
+                    c.setModelo_vehiculo(res.getString("Modelo_Vehiculo"));
                     c.setMatricula(res.getString("matricula"));
+                    c.setPassword(res.getString("password"));
                     result = c;
                 }
             }
@@ -102,6 +111,7 @@ public class clientesDAO implements DAO <clientes,String>{
                     c.setTelefono(res.getString("Telefono"));
                     c.setMatricula(res.getString("Matricula"));
                     c.setModelo_vehiculo(res.getString("Modelo_Vehiculo"));
+                    c.setPassword(res.getString("password"));
                     result.add(c);
                 }
             }
@@ -125,6 +135,7 @@ public class clientesDAO implements DAO <clientes,String>{
                     c.setTelefono(res.getString("Telefono"));
                     c.setMatricula(res.getString("Matricula"));
                     c.setModelo_vehiculo(res.getString("Modelo_Vehiculo"));
+                    c.setPassword(res.getString("password"));
                     result = c;
                 }
             }
@@ -151,6 +162,7 @@ public class clientesDAO implements DAO <clientes,String>{
                     c.setTelefono(res.getString("Telefono"));
                     c.setMatricula(res.getString("Matricula"));
                     c.setModelo_vehiculo(res.getString("Modelo_Vehiculo"));
+                    c.setPassword(res.getString("password"));
                     result = c;
                 }
             }

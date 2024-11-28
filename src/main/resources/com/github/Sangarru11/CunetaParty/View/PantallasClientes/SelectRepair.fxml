@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox alignment="TOP_CENTER" prefHeight="720.0" prefWidth="1075.0" spacing="20.0" style="-fx-background-color: e0eaebe7;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.Sangarru11.CunetaParty.View.SelectRepairController">
+    
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <children>
+      <AnchorPane prefHeight="166.0" prefWidth="1036.0">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="443.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Imagenes/CunetaPartyLogo.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="14.0" layoutY="11.0" onMouseClicked="#ReturnToPrincipalPanel" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Imagenes/NewReturn.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <Text smooth="false" strokeType="OUTSIDE" strokeWidth="0.0" text="Tipos de Servicios" textAlignment="CENTER">
+         <font>
+            <Font size="29.0" />
+         </font>
+      </Text>
+      <AnchorPane prefHeight="397.0" prefWidth="1035.0">
+         <children>
+            <HBox alignment="CENTER" layoutX="78.0" layoutY="5.0" prefHeight="191.0" prefWidth="325.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Comprobación" wrappingWidth="168.17314910888672">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Text>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Imagenes/CitaEstandar.png" />
+                     </image>
+                  </ImageView>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="77.0" layoutY="202.0" prefHeight="191.0" prefWidth="369.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Mecanica Urgente" wrappingWidth="135.50650024414062">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </Text>
+                  <ImageView fitHeight="133.0" fitWidth="208.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Imagenes/MecanicaRapida.png" />
+                     </image>
+                  </ImageView>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="603.0" layoutY="5.0" prefHeight="191.0" prefWidth="432.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Mecanica Rapida" wrappingWidth="135.50650024414062">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </Text>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Imagenes/MecanicaRapida.png" />
+                     </image>
+                  </ImageView>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="603.0" layoutY="202.0" prefHeight="191.0" prefWidth="325.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Reprogramaciones" wrappingWidth="211.50643920898438">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </Text>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Imagenes/Reprogramaciones.png" />
+                     </image>
+                  </ImageView>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>

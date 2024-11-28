@@ -5,12 +5,40 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a93e38d3-b74a-44f9-a39b-4a7e5fb1bcee" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/Sangarru11/CunetaParty/Test/TestInsertEmpleados.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/Sangarru11/CunetaParty/Test/TestInsertclientes.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/Sangarru11/CunetaParty/Test/loadConnection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/Sangarru11/CunetaParty/Test/testConnection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/Sangarru11/CunetaParty/View/AddVehicleController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/Sangarru11/CunetaParty/View/AdminPanelController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/Sangarru11/CunetaParty/View/LoginClientesController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/Sangarru11/CunetaParty/View/PrincipalPanelController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/Sangarru11/CunetaParty/View/RegisterPanelController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/Sangarru11/CunetaParty/View/SelectRepairController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/Sangarru11/CunetaParty/View/UsersRegisterController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/github/Sangarru11/CunetaParty/View/PantallasClientes/AddVehicle.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/github/Sangarru11/CunetaParty/View/PantallasClientes/LoginClientes.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/github/Sangarru11/CunetaParty/View/PantallasClientes/PantallaRegistroClientes.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/github/Sangarru11/CunetaParty/View/PantallasClientes/PrincipalPanel.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/github/Sangarru11/CunetaParty/View/PantallasClientes/SelectRepair.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/github/Sangarru11/CunetaParty/View/PantallasEmpleados/AdminPanel.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/github/Sangarru11/CunetaParty/View/PantallasEmpleados/Main.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/github/Sangarru11/CunetaParty/View/PantallasEmpleados/PantallaRegistroEmpleados.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/connection.xml" beforeDir="false" afterPath="$PROJECT_DIR$/connection.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/Sangarru11/CunetaParty/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/Sangarru11/CunetaParty/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/Sangarru11/CunetaParty/View/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/Sangarru11/CunetaParty/View/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/Sangarru11/CunetaParty/View/Scenes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/Sangarru11/CunetaParty/View/Scenes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/Sangarru11/CunetaParty/model/DAO/DAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/Sangarru11/CunetaParty/model/DAO/DAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/github/Sangarru11/CunetaParty/model/DAO/clientesDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/Sangarru11/CunetaParty/model/DAO/clientesDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/github/Sangarru11/CunetaParty/model/DAO/empleadosDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/Sangarru11/CunetaParty/model/DAO/empleadosDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/github/Sangarru11/CunetaParty/model/DAO/empleadosServiciosDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/Sangarru11/CunetaParty/model/DAO/empleadosServiciosDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/Sangarru11/CunetaParty/model/DAO/reservasDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/Sangarru11/CunetaParty/model/DAO/reservasDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/github/Sangarru11/CunetaParty/model/DAO/serviciosDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/Sangarru11/CunetaParty/model/DAO/serviciosDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/github/Sangarru11/CunetaParty/model/entity/clientes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/Sangarru11/CunetaParty/model/entity/clientes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/Sangarru11/CunetaParty/model/entity/empleados.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/Sangarru11/CunetaParty/model/entity/empleados.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/Sangarru11/CunetaParty/model/entity/servicios.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/Sangarru11/CunetaParty/model/entity/servicios.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/github/Sangarru11/CunetaParty/View/Main.fxml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +49,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="FxmlFile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -44,13 +73,18 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.Executable.executor": "Run",
+    "Application.TestInsertEmpleados.executor": "Run",
+    "Application.TestInsertclientes.executor": "Run",
+    "Application.loadConnection.executor": "Run",
+    "Application.testConnection.executor": "Run",
     "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "com.codeium.enabled": "true",
-    "git-widget-placeholder": "ProyectoArreglado",
+    "git-widget-placeholder": "ControladoresDAO",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/santi/Escritorio/2DAM-Francisco-De-Los-Rios/ACDA-MariCarmen/1Trimestre/CunetaParty/src/main/resources/com/github/Sangarru11/CunetaParty/View/PantallasClientes",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -60,10 +94,20 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\santi\Escritorio\2DAM-Francisco-De-Los-Rios\ACDA-MariCarmen\1Trimestre\CunetaParty\src\main\resources\com\github\Sangarru11\CunetaParty\View\PantallasClientes" />
+      <recent name="C:\Users\santi\Escritorio\2DAM-Francisco-De-Los-Rios\ACDA-MariCarmen\1Trimestre\CunetaParty\src\main\resources\com\github\Sangarru11\CunetaParty\View\PantallasEmpleados" />
+      <recent name="C:\Users\santi\Escritorio\2DAM-Francisco-De-Los-Rios\ACDA-MariCarmen\1Trimestre\CunetaParty\src\main\resources\com\github\Sangarru11\CunetaParty\View" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\santi\Escritorio\2DAM-Francisco-De-Los-Rios\ACDA-MariCarmen\1Trimestre\CunetaParty\src\main\resources\com\github\Sangarru11\CunetaParty\View\PantallasClientes" />
+      <recent name="C:\Users\santi\Escritorio\2DAM-Francisco-De-Los-Rios\ACDA-MariCarmen\1Trimestre\CunetaParty\src\main\resources\com\github\Sangarru11\CunetaParty\View\PantallasEmpleados" />
       <recent name="C:\Users\santi\Escritorio\2DAM-Francisco-De-Los-Rios\ACDA-MariCarmen\1Trimestre\CunetaParty\src\main\resources\com\github\Sangarru11\CunetaParty\View" />
       <recent name="C:\Users\santi\Escritorio\2DAM-Francisco-De-Los-Rios\ACDA-MariCarmen\1Trimestre\CunetaParty\src\main\resources\com\github\Sangarru11" />
       <recent name="C:\Users\santi\Escritorio\2DAM-Francisco-De-Los-Rios\ACDA-MariCarmen\1Trimestre\CunetaParty\target\classes\com\github\Sangarru11\CunetaParty\View" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.github.Sangarru11.CunetaParty.View" />
     </key>
   </component>
   <component name="RunManager">
@@ -92,7 +136,10 @@
       <updated>1732609617848</updated>
       <workItem from="1732609618938" duration="1109000" />
       <workItem from="1732610738075" duration="66000" />
-      <workItem from="1732610818701" duration="9445000" />
+      <workItem from="1732610818701" duration="9504000" />
+      <workItem from="1732654873379" duration="237000" />
+      <workItem from="1732779516810" duration="17088000" />
+      <workItem from="1732823484858" duration="4188000" />
     </task>
     <servers />
   </component>
