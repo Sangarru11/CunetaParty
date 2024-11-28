@@ -1,18 +1,31 @@
 package com.github.Sangarru11.CunetaParty.model.entity;
 
+import java.util.List;
 import java.util.Objects;
 
 public class servicios {
     private int id_servicio;
+    private List<empleados> empleados;
     private String nombre;
     private String precio;
 
+
     public servicios() {
     }
-    public servicios(int id_servicio, String nombre, String precio) {
+
+    public servicios(int id_servicio, List<empleados> empleados, String nombre, String precio) {
         this.id_servicio = id_servicio;
+        this.empleados = empleados;
         this.nombre = nombre;
         this.precio = precio;
+    }
+
+    public List<empleados> getEmpleados() {
+        return empleados;
+    }
+
+    public void setEmpleados(List<empleados> empleados) {
+        this.empleados = empleados;
     }
 
     public int getId_servicio() {
@@ -44,7 +57,9 @@ public class servicios {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         servicios servicios = (servicios) o;
-        return id_servicio == servicios.id_servicio && Objects.equals(nombre, servicios.nombre) && Objects.equals(precio, servicios.precio);
+        return id_servicio == servicios.id_servicio &&
+                Objects.equals(nombre, servicios.nombre) &&
+                Objects.equals(precio, servicios.precio);
     }
 
     @Override
@@ -52,12 +67,14 @@ public class servicios {
         return Objects.hash(id_servicio, nombre, precio);
     }
 
+
     @Override
     public String toString() {
         return "servicios{" +
                 "id_servicio=" + id_servicio +
                 ", nombre='" + nombre + '\'' +
                 ", precio='" + precio + '\'' +
+                ", empleados=" + empleados +
                 '}';
     }
 }
