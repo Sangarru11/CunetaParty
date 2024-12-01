@@ -18,7 +18,6 @@ public class clientesDAO implements DAO<clientes, String> {
     private static final String FINDBYNAME = "SELECT ID, id_vehiculo, dni, Nombre, Telefono, password FROM clientes WHERE Nombre=?";
     private static final String INSERT = "INSERT INTO clientes (id_vehiculo, dni, Nombre, Telefono, password) VALUES (?, ?, ?, ?, ?)";
     private static final String UPDATE = "UPDATE clientes SET id_vehiculo=?, Nombre=?, Telefono=?, password=? WHERE ID=?";
-    private static final String UPDATE_CLIENTE_VEHICULO = "UPDATE clientes SET id_vehiculo=? WHERE ID=?";
     private static final String DELETE = "DELETE FROM clientes WHERE ID=?";
     private Connection connection;
 

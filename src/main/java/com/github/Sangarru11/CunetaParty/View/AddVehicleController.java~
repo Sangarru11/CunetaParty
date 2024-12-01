@@ -55,7 +55,7 @@ public class AddVehicleController extends Controller implements Initializable {
 
         vehiculoDAO.build().save(nuevoVehiculo);
 
-        String clienteId = (String) txtClienteId.getValue();
+        String clienteId = txtClienteId.getText();
         if (clienteId != null && !clienteId.isEmpty()) {
             try {
                 int clienteIdInt = Integer.parseInt(clienteId);
