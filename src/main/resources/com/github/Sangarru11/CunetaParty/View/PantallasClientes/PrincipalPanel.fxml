@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.image.Image?>
@@ -25,38 +24,6 @@
                   <Image url="@../Imagenes/CunetaPartyLogo.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="679.0" layoutY="15.0" onMouseClicked="#AddVehicle" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../Imagenes/CocheNormal.png" />
-               </image>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </ImageView>
-            <Text layoutX="735.0" layoutY="35.0" onMouseClicked="#AddVehicle" strokeType="OUTSIDE" strokeWidth="0.0" text="Añadir Vehiculo" wrappingWidth="83.79632568359375">
-               <font>
-                  <Font name="System Bold" size="19.0" />
-               </font>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </Text>
-            <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="854.0" layoutY="17.0" onMouseClicked="#SelectService" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../Imagenes/IconoReparaciones.png" />
-               </image>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </ImageView>
-            <Text layoutX="910.0" layoutY="35.0" onMouseClicked="#SelectService" strokeType="OUTSIDE" strokeWidth="0.0" text="Seleccionar Servicio" wrappingWidth="111.7962646484375">
-               <font>
-                  <Font name="System Bold" size="19.0" />
-               </font>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </Text>
             <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="14.0" layoutY="11.0" onMouseClicked="#ReturnToUserLogin" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../Imagenes/NewReturn.png" />
@@ -69,12 +36,11 @@
             <Font size="29.0" />
          </font>
       </Text>
-      <TableView fx:id="tableView" prefHeight="321.0" prefWidth="986.0">
+      <TableView fx:id="tableView" prefHeight="295.0" prefWidth="738.0">
         <columns>
-          <TableColumn prefWidth="363.3333339691162" text="Foto" />
-          <TableColumn fx:id="columnDescription" prefWidth="369.9999694824219" text="Modelo" />
-            <TableColumn fx:id="columnRepairDate" prefWidth="152.666748046875" text="Matricula" />
-            <TableColumn prefWidth="150.6666259765625" text="Estado de la Reparación" />
+          <TableColumn fx:id="ModeloVehiculo" prefWidth="636.0001125335693" text="Modelo" />
+            <TableColumn fx:id="Matricula" prefWidth="207.9998779296875" text="Matricula" />
+            <TableColumn fx:id="EstadoReparacion" prefWidth="191.3333740234375" text="Estado de la Reparación" />
         </columns>
       </TableView>
       <HBox alignment="BOTTOM_RIGHT" prefHeight="100.0" prefWidth="1036.0" />

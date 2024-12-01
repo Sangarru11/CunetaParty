@@ -9,6 +9,10 @@ public enum Scenes {
     SelectRepair("View/PantallasClientes/SelectRepair.fxml"),
     AddVehicle("View/PantallasClientes/AddVehicle.fxml"),
     ClientesRegisterPanel("View/PantallasClientes/PantallaRegistroClientes.fxml"),
+    MecanicaUrgente("View/PantallasClientes/MecanicaUrgente.fxml"),
+    MecanicaRapida("View/PantallasClientes/MecanicaRapida.fxml"),
+    Reprogramaciones("View/PantallasClientes/Reprogramaciones.fxml"),
+    Comprobacion("View/PantallasClientes/Comprobacion.fxml"),
     EmpleadosRegisterPanel("View/PantallasEmpleados/PantallaRegistroEmpleados.fxml");
     private String url;
     Scenes(String url){

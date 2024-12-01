@@ -1,0 +1,64 @@
+package com.github.Sangarru11.CunetaParty.model.entity;
+
+import java.util.Objects;
+
+public class vehiculo {
+    private int id_vehiculo;
+    private String Modelo_Vehiculo;
+    private String Matricula;
+
+    public vehiculo() {
+    }
+
+    public vehiculo(int id_vehiculo, String modelo_Vehiculo, String matricula) {
+        this.id_vehiculo = id_vehiculo;
+        Modelo_Vehiculo = modelo_Vehiculo;
+        Matricula = matricula;
+    }
+
+    public int getId_vehiculo() {
+        return id_vehiculo;
+    }
+
+    public void setId_vehiculo(int id_vehiculo) {
+        this.id_vehiculo = id_vehiculo;
+    }
+
+    public String getModelo_Vehiculo() {
+        return Modelo_Vehiculo;
+    }
+
+    public void setModelo_Vehiculo(String modelo_Vehiculo) {
+        Modelo_Vehiculo = modelo_Vehiculo;
+    }
+
+    public String getMatricula() {
+        return Matricula;
+    }
+
+    public void setMatricula(String matricula) {
+        Matricula = matricula;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        vehiculo vehiculo = (vehiculo) o;
+        return id_vehiculo == vehiculo.id_vehiculo && Objects.equals(Modelo_Vehiculo, vehiculo.Modelo_Vehiculo) && Objects.equals(Matricula, vehiculo.Matricula);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id_vehiculo, Modelo_Vehiculo, Matricula);
+    }
+
+    @Override
+    public String toString() {
+        return "vehiculo{" +
+                "id_vehiculo=" + id_vehiculo +
+                ", Modelo_Vehiculo='" + Modelo_Vehiculo + '\'' +
+                ", Matricula='" + Matricula + '\'' +
+                '}';
+    }
+}

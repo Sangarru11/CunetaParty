@@ -10,8 +10,6 @@ public class TestInsertclientes {
         clientes.setDni("12345678A");
         clientes.setNombre("Juan Perez");
         clientes.setTelefono("123456789");
-        clientes.setModelo_vehiculo("Toyota Corolla");
-        clientes.setMatricula("ABC1234");
 
         clientesDAO clientesDAO = new clientesDAO();
         clientesDAO.save(clientes);
