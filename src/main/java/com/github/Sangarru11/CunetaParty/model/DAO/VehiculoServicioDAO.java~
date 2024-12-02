@@ -1,0 +1,194 @@
+package com.github.Sangarru11.CunetaParty.model.DAO;
+
+import com.github.Sangarru11.CunetaParty.model.Connection.ConnectionMariaDB;
+import com.github.Sangarru11.CunetaParty.model.entity.VehiculoServicio;
+import com.github.Sangarru11.CunetaParty.model.entity.empleados;
+
+import java.io.IOException;
+import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
+
+public class VehiculoServicioDAO implements DAO<VehiculoServicio, String> {
+    private static final String FINDBYID = "SELECT v.matricula, v.modelo, v.estadoReparacion, e.id_empleado, e.DNI, e.Nombre FROM VehiculoServicio AS v LEFT JOIN empleados_servicio AS es ON v.matricula = es.matricula LEFT JOIN empleados AS e ON es.id_empleado = e.id_empleado WHERE v.matricula = ?";
+    private static final String FINDBYNAME = "SELECT v.matricula, v.modelo, v.estadoReparacion FROM VehiculoServicio AS v WHERE v.modelo = ?";
+    private static final String FINDBYALL = "SELECT v.matricula, v.modelo, v.estadoReparacion FROM VehiculoServicio AS v";
+    private static final String INSERT = "INSERT INTO VehiculoServicio (matricula, modelo, estadoReparacion) VALUES (?, ?, ?)";
+    private static final String UPDATE = "UPDATE VehiculoServicio SET modelo = ?, estadoReparacion = ? WHERE matricula = ?";
+    private static final String DELETE = "DELETE FROM VehiculoServicio WHERE matricula = ?";
+    private Connection connection;
+
+    public VehiculoServicioDAO() {
+        connection = ConnectionMariaDB.getConnection();
+    }
+
+    @Override
+    public VehiculoServicio save(VehiculoServicio entity) {
+        VehiculoServicio result = entity;
+        if (entity != null) {
+            String matricula = entity.getMatricula();
+            if (matricula != null) {
+                VehiculoServicio isInDatabase = findById(matricula);
+                if (isInDatabase == null) {
+                    try (PreparedStatement pst = connection.prepareStatement(INSERT)) {
+                        pst.setString(1, entity.getMatricula());
+                        pst.setString(2, entity.getModeloVehiculo());
+                        pst.setString(3, entity.getEstadoReparacion());
+                        pst.executeUpdate();
+                    } catch (SQLException e) {
+                        e.printStackTrace();
+                    }
+                } else {
+                    try (PreparedStatement pst = connection.prepareStatement(UPDATE)) {
+                        pst.setString(1, entity.getModeloVehiculo());
+                        pst.setString(2, entity.getEstadoReparacion());
+                        pst.setString(3, entity.getMatricula());
+                        pst.executeUpdate();
+                    } catch (SQLException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        }
+        return result;
+    }
+
+    @Override
+    public VehiculoServicio delete(VehiculoServicio entity) throws SQLException {
+        if (entity != null) {
+            try (PreparedStatement pst = connection.prepareStatement(DELETE)) {
+                pst.setString(1, entity.getMatricula());
+                pst.executeUpdate();
+            }
+        }
+        return entity;
+    }
+
+    @Override
+    public empleados adminManage(empleados entity) throws SQLException {
+        return null;
+    }
+
+    @Override
+    public VehiculoServicio findById(String key) {
+        VehiculoServicio result = null;
+        try (PreparedStatement pst = connection.prepareStatement(FINDBYID)) {
+            pst.setString(1, key);
+            try (ResultSet res = pst.executeQuery()) {
+                if (res.next()) {
+                    VehiculoServicioLazy v = new VehiculoServicioLazy();
+                    v.setMatricula(res.getString("matricula"));
+                    v.setModeloVehiculo(res.getString("Modelo"));
+                    v.setEstadoReparacion(res.getString("estadoReparacion"));
+
+                    List<empleados> empleadosList = new ArrayList<>();
+                    do {
+                        empleados e = new empleados();
+                        e.setId_empleado(res.getInt("id_empleado"));
+                        e.setDNI(res.getString("DNI"));
+                        e.setNombre(res.getString("Nombre"));
+                        empleadosList.add(e);
+                    } while (res.next());
+
+                    v.setEmpleados(empleadosList);
+                    result = v;
+                }
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return result;
+    }
+
+    @Override
+    public List<VehiculoServicio> findbyAll() {
+        List<VehiculoServicio> vehiculoServicios = new ArrayList<>();
+        try (PreparedStatement pst = connection.prepareStatement(FINDBYALL)) {
+            try (ResultSet res = pst.executeQuery()) {
+                while (res.next()) {
+                    VehiculoServicioLazy v = new VehiculoServicioLazy();
+                    v.setMatricula(res.getString("matricula"));
+                    v.setModelo(res.getString("modelo"));
+                    v.setEstadoReparacion(res.getString("estadoReparacion"));
+                    vehiculoServicios.add(v);
+                }
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return vehiculoServicios;
+    }
+
+    @Override
+    public VehiculoServicio findByDate(String key) {
+        return null;
+    }
+
+    @Override
+    public VehiculoServicio findByDNI(String key) {
+        return null;
+    }
+
+    @Override
+    public VehiculoServicio findByName(String key) {
+        VehiculoServicio result = null;
+        try (PreparedStatement pst = connection.prepareStatement(FINDBYNAME)) {
+            pst.setString(1, key);
+            try (ResultSet res = pst.executeQuery()) {
+                if (res.next()) {
+                    VehiculoServicioLazy v = new VehiculoServicioLazy();
+                    v.setMatricula(res.getString("matricula"));
+                    v.setModelo(res.getString("modelo"));
+                    v.setEstadoReparacion(res.getString("estadoReparacion"));
+                    result = v;
+                }
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return result;
+    }
+
+    @Override
+    public void close() throws IOException {
+        if (connection != null) {
+            try {
+                connection.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    class VehiculoServicioLazy extends VehiculoServicio {
+        private static final String FINDEMPLOYEESBYVEHICLE = "SELECT e.* FROM empleados_servicio es JOIN empleados e ON es.id_empleado = e.id_empleado WHERE es.matricula = ?";
+
+        @Override
+        public List<empleados> getEmpleados() {
+            if (super.getEmpleados() == null) {
+                List<empleados> result = new ArrayList<>();
+                try (PreparedStatement pst = connection.prepareStatement(FINDEMPLOYEESBYVEHICLE)) {
+                    pst.setString(1, getMatricula());
+                    try (ResultSet res = pst.executeQuery()) {
+                        while (res.next()) {
+                            empleados e = new empleados();
+                            e.setId_empleado(res.getInt("id_empleado"));
+                            e.setDNI(res.getString("DNI"));
+                            e.setNombre(res.getString("Nombre"));
+                            result.add(e);
+                        }
+                    }
+                    super.setEmpleados(result);
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+            return super.getEmpleados();
+        }
+    }
+
+    public static VehiculoServicioDAO build() {
+        return new VehiculoServicioDAO();
+    }
+}
+
