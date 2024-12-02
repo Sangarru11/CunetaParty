@@ -1,13 +1,12 @@
 /* Fondo y márgenes generales */
 .root {
-    -fx-background-color: #f5f5f5; /* Fondo suave */
+    -fx-background-color: #f5f5f5; /* Color de fondo suave */
 }
 
 .vbox {
-    -fx-alignment: center;
+    -fx-alignment: top-center;
     -fx-spacing: 20px;
     -fx-background-color: #e0eaebe7;
-    -fx-padding: 20px;
 }
 
 /* Estilo para las imágenes */
@@ -24,19 +23,20 @@
 .text {
     -fx-font-family: 'Segoe UI', Tahoma, sans-serif;
     -fx-font-size: 18px;
-    -fx-text-fill: #444444;
-    -fx-cursor: text;
+    -fx-text-fill: #444444; /* Texto gris oscuro */
+    -fx-cursor: hand;
 }
 
-/* Estilo para los textos de las etiquetas */
-.label-text {
-    -fx-font-size: 17px;
-    -fx-font-weight: normal;
+/* Estilo para los títulos */
+.text-title {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
     -fx-text-fill: #333333;
+    -fx-text-alignment: center;
 }
 
 /* Estilo para los campos de texto (TextField) */
-.input-field {
+.text-field {
     -fx-background-color: #ffffff;
     -fx-border-color: #ccc;
     -fx-border-radius: 5px;
@@ -46,7 +46,7 @@
     -fx-text-fill: #444444;
 }
 
-.input-field:focused {
+.text-field:focused {
     -fx-border-color: #abd5ff;
 }
 

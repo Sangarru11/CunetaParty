@@ -5,12 +5,12 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="579.0" prefWidth="600.0" style="-fx-background-color: grey;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.Sangarru11.CunetaParty.View.CreateRepairPanelController">
+<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="640.0" style="-fx-background-color: e0eaebe7;" stylesheets="@../css/CreateRepair.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.Sangarru11.CunetaParty.View.CreateRepairPanelController">
    <children>
       <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
          <VBox.margin>
@@ -20,42 +20,29 @@
             <Image url="@../Imagenes/CunetaPartyLogo.png" />
          </image>
       </ImageView>
-      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Introduce la descripcion">
-         <font>
-            <Font size="20.0" />
-         </font>
-         <VBox.margin>
-            <Insets bottom="20.0" />
-         </VBox.margin>
-      </Text>
-      <TextField fx:id="txtDescription">
-         <VBox.margin>
-            <Insets bottom="20.0" />
-         </VBox.margin>
-      </TextField>
-      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Introduce la matricula">
-         <font>
-            <Font size="20.0" />
-         </font>
-         <VBox.margin>
-            <Insets bottom="20.0" />
-         </VBox.margin>
-      </Text>
-      <TextField fx:id="txtPlateNumber">
-         <VBox.margin>
-            <Insets bottom="20.0" />
-         </VBox.margin>
-      </TextField>
-      <ImageView fitHeight="97.0" fitWidth="83.0" onMouseClicked="#CreateRepair" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../Imagenes/CreateRepair.png" />
-         </image>
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor></ImageView>
-      <HBox alignment="BOTTOM_RIGHT" prefHeight="100.0" prefWidth="200.0">
+      <AnchorPane prefHeight="301.0" prefWidth="640.0">
          <children>
-            <ImageView fitHeight="70.0" fitWidth="50.0" onMouseClicked="#changeAdminPanelController" pickOnBounds="true" preserveRatio="true">
+            <Text layoutX="214.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Introduce la descripcion">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <TextField fx:id="txtDescription" layoutX="167.0" layoutY="38.0" prefHeight="25.0" prefWidth="306.0" promptText="Descripcion de la reparacion" />
+            <Text layoutX="222.0" layoutY="114.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Introduce la matricula">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <TextField fx:id="txtPlateNumber" layoutX="228.0" layoutY="128.0" promptText="Matricula" />
+            <ImageView fitHeight="70.0" fitWidth="70.0" layoutX="284.0" layoutY="187.0" onMouseClicked="#CreateRepair" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Imagenes/CreateRepair.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fitHeight="70.0" fitWidth="50.0" layoutX="570.0" layoutY="227.0" onMouseClicked="#changeAdminPanelController" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../Imagenes/Return.png" />
                </image>
@@ -64,7 +51,7 @@
                </cursor>
             </ImageView>
          </children>
-      </HBox>
+      </AnchorPane>
    </children>
    <opaqueInsets>
       <Insets top="20.0" />

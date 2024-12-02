@@ -192,7 +192,7 @@ public class AdminPanelController extends Controller implements Initializable {
      */
     @FXML
     public void CreateRepair() throws IOException {
-        changeScene(Scenes.CreateRepair, null);
+        MainController.changeSceneToRegister(Scenes.CreateRepair, null);
     }
 
     /**
@@ -210,7 +210,7 @@ public class AdminPanelController extends Controller implements Initializable {
      */
     @FXML
     public void ReturnToLogin() throws IOException {
-        changeScene(Scenes.MAIN, null);
+        MainController.changeSceneToRegister(Scenes.MAIN, null);
     }
 
     /**

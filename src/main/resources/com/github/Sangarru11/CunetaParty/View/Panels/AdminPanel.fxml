@@ -11,7 +11,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<VBox alignment="TOP_CENTER" prefHeight="680.0" prefWidth="1076.0" spacing="20.0" style="-fx-background-color: grey;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.Sangarru11.CunetaParty.View.AdminPanelController">
+<VBox alignment="TOP_CENTER" prefHeight="680.0" prefWidth="1076.0" spacing="20.0" style="-fx-background-color: e0eaebe7;" stylesheets="@../css/AdminPanel.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.Sangarru11.CunetaParty.View.AdminPanelController">
 
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
@@ -77,7 +77,7 @@
                   </HBox>
                </children>
                <HBox.margin>
-                  <Insets left="200.0" />
+                  <Insets left="460.0" />
                </HBox.margin>
             </VBox>
             <VBox prefHeight="150.0" prefWidth="189.0">
@@ -118,7 +118,7 @@
                               <Cursor fx:constant="HAND" />
                            </cursor>
                         </ImageView>
-                        <Text onMouseClicked="#setAdmin" strokeType="OUTSIDE" strokeWidth="0.0" text="Modificar Administradores" wrappingWidth="155.47012329101562">
+                        <Text onMouseClicked="#setAdmin" strokeType="OUTSIDE" strokeWidth="0.0" text="Gestionar Empleados" wrappingWidth="155.47012329101562">
                            <font>
                               <Font size="20.0" />
                            </font>
@@ -137,7 +137,7 @@
             <VBox prefHeight="200.0" prefWidth="350.0" />
             <VBox alignment="CENTER" prefWidth="350.0">
                <children>
-                  <Text fill="WHITE" smooth="false" strokeType="OUTSIDE" strokeWidth="0.0" text="Reparaciones en curso" textAlignment="CENTER">
+                  <Text smooth="false" strokeType="OUTSIDE" strokeWidth="0.0" text="Reparaciones en curso" textAlignment="CENTER">
                      <font>
                         <Font size="29.0" />
                      </font>
@@ -160,12 +160,12 @@
       </HBox>
       <TableView fx:id="tableView" prefHeight="321.0" prefWidth="986.0" styleClass="table-view">
          <columns>
-            <TableColumn fx:id="columnIDRepair" prefWidth="88.0" styleClass="table-column" text="IdReparacion" />
-            <TableColumn fx:id="columnDescription" prefWidth="535.0" styleClass="table-column" text="Descripcion Reparacion" />
-            <TableColumn fx:id="columnRepairDate" prefWidth="106.0" styleClass="table-column" text="Fecha Reparacion" />
-            <TableColumn fx:id="columnRepairState" minWidth="0.0" prefWidth="81.0" styleClass="table-column" text="Estado" />
-            <TableColumn fx:id="columnIdMechanic" prefWidth="92.0" styleClass="table-column" text="Mecanicos" />
-            <TableColumn fx:id="columnPlateNumber" prefWidth="131.33331298828125" styleClass="table-column" text="Numero de Matricula" />
+            <TableColumn fx:id="columnIDRepair" prefWidth="124.0000057220459" styleClass="table-column" text="IdReparacion" />
+            <TableColumn fx:id="columnDescription" prefWidth="435.33338928222656" styleClass="table-column" text="Descripcion Reparacion" />
+            <TableColumn fx:id="columnRepairDate" prefWidth="160.6666259765625" styleClass="table-column" text="Fecha Reparacion" />
+            <TableColumn fx:id="columnRepairState" minWidth="0.0" prefWidth="106.6666259765625" styleClass="table-column" text="Estado" />
+            <TableColumn fx:id="columnIdMechanic" prefWidth="103.3333740234375" styleClass="table-column" text="Mecanicos" />
+            <TableColumn fx:id="columnPlateNumber" prefWidth="105.33331298828125" styleClass="table-column" text="Matricula" />
          </columns>
       </TableView>
       <HBox alignment="BOTTOM_RIGHT" prefHeight="100.0" prefWidth="200.0">

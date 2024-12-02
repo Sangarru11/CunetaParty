@@ -6,6 +6,7 @@ import com.github.Sangarru11.CunetaParty.View.Scenes;
 import com.github.Sangarru11.CunetaParty.View.View;
 import javafx.application.Application;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -26,6 +27,8 @@ public class App extends Application {
         currentController = view.controller;
         currentController.onOpen(null);
         App.stage = stage;
+        stage.setTitle("Cuneta Party");
+        stage.getIcons().add(new Image(getClass().getResourceAsStream("/com/github/Sangarru11/CunetaParty/view/Imagenes/CunetaPartyLogo.png")));
         stage.setScene(scene);
         stage.show();
     }

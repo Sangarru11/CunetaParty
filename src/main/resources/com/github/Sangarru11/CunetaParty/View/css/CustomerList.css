@@ -30,6 +30,7 @@
     -fx-cursor: hand;
 }
 
+
 /* Estilo para los títulos principales */
 .text-title {
     -fx-font-size: 28px;
@@ -37,11 +38,6 @@
     -fx-text-fill: #333333;
     -fx-text-alignment: center;
     -fx-padding: 10px 0;
-}
-
-/* Estilo para los botones de texto e imágenes */
-.hbox .text {
-    -fx-margin-left: 10px;
 }
 
 /* Estilo de la tabla */
@@ -107,4 +103,3 @@
 .vbox .text-title {
     -fx-padding: 0 0 10px 0;
 }
-

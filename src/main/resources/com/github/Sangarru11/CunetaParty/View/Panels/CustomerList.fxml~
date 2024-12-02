@@ -1,81 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="635.0" prefWidth="638.0" style="-fx-background-color: grey;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.Sangarru11.ProyectoFinal.View.CustomersListController">
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="690.0" prefWidth="790.0" style="-fx-background-color: e0eaebe7;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.Sangarru11.CunetaParty.View.AdminPanelController">
    <children>
-      <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="321.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@ImagenPrincipal.png" />
+            <Image url="@../Imagenes/CunetaPartyLogo.png" />
          </image>
-         <VBox.margin>
-            <Insets bottom="20.0" />
-         </VBox.margin>
       </ImageView>
-      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
-         <VBox.margin>
-            <Insets bottom="20.0" />
-         </VBox.margin>
-         <children>
-            <VBox prefHeight="200.0" prefWidth="200.0" />
-            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="200.0">
-               <children>
-                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Lista de Clientes">
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                  </Text>
-               </children>
-            </VBox>
-            <VBox alignment="BOTTOM_RIGHT" prefHeight="200.0" prefWidth="200.0">
-               <children>
-                  <ImageView fitHeight="70.0" fitWidth="50.0" onMouseClicked="#DeleteCustomer" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@Delete.png" />
-                     </image>
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                  </ImageView>
-               </children>
-            </VBox>
-         </children>
-      </HBox>
-      <TableView fx:id="tableView" prefHeight="200.0" prefWidth="200.0">
-        <columns>
-          <TableColumn fx:id="columnClientId" prefWidth="56.0" text="IdCliente" />
-          <TableColumn fx:id="columnClientName" prefWidth="134.0" text="Nombre Cliente" />
+      <TableView fx:id="tableView" layoutX="59.0" layoutY="336.0" prefHeight="200.0" prefWidth="671.0">
+         <columns>
+            <TableColumn fx:id="columnClientId" prefWidth="56.0" text="IdCliente" />
+            <TableColumn fx:id="columnClientName" prefWidth="168.0" text="Nombre Cliente" />
             <TableColumn fx:id="columnPhoneNumber" prefWidth="144.0" text="Numero de Telefono" />
-            <TableColumn fx:id="columnDNI" prefWidth="122.0" text="DNI" />
-            <TableColumn fx:id="columnPlateNumber" minWidth="0.0" prefWidth="143.0" text="Numero de Matricula" />
-        </columns>
-         <VBox.margin>
-            <Insets bottom="20.0" />
-         </VBox.margin>
+            <TableColumn fx:id="columnDNI" prefWidth="139.33331298828125" text="DNI" />
+            <TableColumn fx:id="columnPlateNumber" minWidth="0.0" prefWidth="162.66656494140625" text="Numero de Matricula" />
+         </columns>
       </TableView>
-      <HBox alignment="BOTTOM_RIGHT" prefHeight="100.0" prefWidth="200.0">
-         <children>
-            <ImageView fitHeight="70.0" fitWidth="50.0" onMouseClicked="#changeAdminPanelController" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@Return.png" />
-               </image>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </ImageView>
-         </children>
-      </HBox>
+      <ImageView fitHeight="70.0" fitWidth="50.0" layoutX="713.0" layoutY="618.0" onMouseClicked="#changeAdminPanelController" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Imagenes/Return.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Text layoutX="319.0" layoutY="290.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lista de Clientes">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="70.0" fitWidth="50.0" layoutX="707.0" layoutY="257.0" onMouseClicked="#DeleteCustomer" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Imagenes/Delete.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
    </children>
-   <padding>
-      <Insets left="20.0" right="20.0" top="20.0" />
-   </padding>
-</VBox>
+</AnchorPane>
