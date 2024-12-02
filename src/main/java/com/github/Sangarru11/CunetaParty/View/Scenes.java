@@ -1,19 +1,19 @@
 package com.github.Sangarru11.CunetaParty.View;
 
 public enum Scenes {
+    REGISTERPANEL("View/Panels/RegisterPanel.fxml"),
+    MAIN("View/Panels/main.fxml"),
+    PrinPanel("View/Panels/PrincipalPanel.fxml"),
+    AddCustomersPanel("View/Panels/AddCustomers.fxml"),
+    MechanicInfo("View/Panels/MechanicInfo.fxml"),
+    AssingRepairs("View/Panels/AssingRepairs.fxml"),
+    SelectCustomer("View/Panels/SelectCustomer.fxml"),
+    SelectMechanic("View/Panels/SelectMechanic.fxml"),
+    CreateRepair("View/Panels/CreateRepair.fxml"),
+    AdminController("View/Panels/AdminManager.fxml"),
+    CustomersListController("View/Panels/CustomerList.fxml"),
+    AdminPanel("View/Panels/AdminPanel.fxml");
 
-    MAIN("View/PantallasClientes/LoginClientes.fxml"),
-    LoginEmpleados("View/PantallasEmpleados/Main.fxml"),
-    AdminPanel("View/PantallasEmpleados/AdminPanel.fxml"),
-    PrinPanel("View/PantallasClientes/PrincipalPanel.fxml"),
-    SelectRepair("View/PantallasClientes/SelectRepair.fxml"),
-    AddVehicle("View/PantallasClientes/AddVehicle.fxml"),
-    ClientesRegisterPanel("View/PantallasClientes/PantallaRegistroClientes.fxml"),
-    MecanicaUrgente("View/PantallasClientes/MecanicaUrgente.fxml"),
-    MecanicaRapida("View/PantallasClientes/MecanicaRapida.fxml"),
-    Reprogramaciones("View/PantallasClientes/Reprogramaciones.fxml"),
-    Comprobacion("View/PantallasClientes/Comprobacion.fxml"),
-    EmpleadosRegisterPanel("View/PantallasEmpleados/PantallaRegistroEmpleados.fxml");
     private String url;
     Scenes(String url){
         this.url=url;
@@ -21,4 +21,5 @@ public enum Scenes {
     public String getURL(){
         return url;
     }
+
 }
