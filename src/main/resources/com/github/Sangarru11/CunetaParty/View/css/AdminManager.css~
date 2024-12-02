@@ -5,6 +5,7 @@
 
 /* Estilo para los textos con clase 'label-text' */
 .label-text {
+    -fx-fill: #00796b; /* Color del texto */
     -fx-font-family: 'Arial';
     -fx-font-weight: bold;
 }

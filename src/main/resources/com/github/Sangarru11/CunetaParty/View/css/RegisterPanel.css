@@ -3,11 +3,12 @@
     -fx-background-color: #f5f5f5; /* Fondo suave */
 }
 
-.vbox {
-    -fx-alignment: center;
-    -fx-spacing: 20px;
-    -fx-background-color: #e0eaebe7;
-    -fx-padding: 20px;
+.border-pane {
+    -fx-background-color: #e0eaebe7; /* Fondo de la ventana */
+}
+
+.left, .right {
+    -fx-background-color: #ffffff;
 }
 
 /* Estilo para las imágenes */
@@ -23,20 +24,12 @@
 /* Estilo para los textos */
 .text {
     -fx-font-family: 'Segoe UI', Tahoma, sans-serif;
-    -fx-font-size: 18px;
+    -fx-font-size: 20px;
     -fx-text-fill: #444444;
-    -fx-cursor: text;
 }
 
-/* Estilo para los textos de las etiquetas */
-.label-text {
-    -fx-font-size: 17px;
-    -fx-font-weight: normal;
-    -fx-text-fill: #333333;
-}
-
-/* Estilo para los campos de texto (TextField) */
-.input-field {
+/* Estilo para los campos de texto (TextField y PasswordField) */
+.text-field, .password-field {
     -fx-background-color: #ffffff;
     -fx-border-color: #ccc;
     -fx-border-radius: 5px;
@@ -46,20 +39,31 @@
     -fx-text-fill: #444444;
 }
 
-.input-field:focused {
+.text-field:focused, .password-field:focused {
     -fx-border-color: #abd5ff;
 }
 
-/* Estilo para los botones de imagen */
-.image-view-button {
-    -fx-background-color: #abd5ff; /* Azul claro */
-    -fx-padding: 12px;
+/* Estilo para el botón de registro */
+.button {
+    -fx-background-color: #9aa8ae;
+    -fx-text-fill: white;
     -fx-font-size: 16px;
-    -fx-border-radius: 8px;
+    -fx-border-radius: 5px;
+    -fx-padding: 12px;
     -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 5, 0.1, 0, 0);
 }
 
-.image-view-button:hover {
-    -fx-background-color: #89c5f8; /* Azul más oscuro al hacer hover */
+.button:hover {
+    -fx-background-color: #8a9a9f; /* Cambio de color al pasar el mouse */
     -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 6, 0.1, 0, 0);
+}
+
+/* Estilo para el contenedor AnchorPane */
+.anchor-pane {
+    -fx-background-color: #ffffff;
+}
+
+/* Estilo para el cursor */
+.cursor-hand {
+    -fx-cursor: hand;
 }

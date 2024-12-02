@@ -1,0 +1,90 @@
+/* Estilo general */
+.root {
+    -fx-background-color: #f5f5f5; /* Fondo claro para la raíz */
+}
+
+/* VBox contenedor principal */
+.vbox {
+    -fx-padding: 20px;
+    -fx-spacing: 20px;
+    -fx-alignment: center;
+}
+
+/* Estilo de los textos */
+.text {
+    -fx-font-family: 'Segoe UI', Tahoma, sans-serif;
+    -fx-font-size: 18px;
+    -fx-text-fill: #444444; /* Texto gris oscuro */
+    -fx-cursor: hand;
+}
+
+/* Título principal */
+.text-title {
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+    -fx-text-alignment: center;
+    -fx-padding: 10px 0;
+}
+
+/* Estilo de la tabla */
+.table-view {
+    -fx-background-color: white;
+    -fx-border-color: #ddd;
+    -fx-border-width: 1px;
+    -fx-font-family: 'Segoe UI', Tahoma, sans-serif;
+    -fx-font-size: 14px;
+}
+
+.table-column {
+    -fx-alignment: CENTER;
+    -fx-font-size: 14px;
+    -fx-text-fill: #444444;
+}
+
+.table-view .column-header {
+    -fx-background-color: #abd5ff; /* Fondo azul para los encabezados */
+    -fx-text-fill: white;
+}
+
+.table-view .table-row-cell:hover {
+    -fx-background-color: #f7f7f7; /* Fondo gris claro al hacer hover */
+}
+
+/* Estilo para las imágenes */
+.image-view {
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 8, 0.1, 0, 0);
+}
+
+.image-view:hover {
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 10, 0.1, 0, 0);
+}
+
+/* Estilo para el área de regreso */
+.hbox {
+    -fx-spacing: 20px;
+}
+
+.hbox .image-view {
+    -fx-cursor: hand;
+}
+
+.hbox .image-view:hover {
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 8, 0.1, 0, 0);
+}
+
+/* Estilo de botones (si se agregan) */
+.button {
+    -fx-background-color: #abd5ff;
+    -fx-text-fill: white;
+    -fx-padding: 10px 20px;
+    -fx-font-size: 16px;
+    -fx-border-radius: 8px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 5, 0.1, 0, 0);
+}
+
+.button:hover {
+    -fx-background-color: #86c0f2;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 6, 0.1, 0, 0);
+}

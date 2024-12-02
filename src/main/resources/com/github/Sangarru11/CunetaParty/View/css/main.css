@@ -3,13 +3,8 @@
     -fx-background-color: #f5f5f5; /* Color de fondo más suave */
 }
 
-.vbox {
+.border-pane {
     -fx-padding: 20;
-    -fx-spacing: 20;
-}
-
-.hbox {
-    -fx-spacing: 15;
 }
 
 /* Estilo para las imágenes de los iconos */
@@ -39,42 +34,22 @@
     -fx-padding: 10px 0;
 }
 
-/* Estilo para los botones de texto e imágenes */
-.hbox .text {
-    -fx-margin-left: 10px;
-}
-
-/* Estilo de la tabla */
-.table-view {
+/* Estilo para los TextField y PasswordField */
+.text-field, .password-field {
     -fx-background-color: #ffffff;
-    -fx-border-color: #ddd;
-    -fx-border-width: 1px;
-    -fx-font-family: 'Segoe UI', Tahoma, sans-serif;
+    -fx-border-color: #ccc;
+    -fx-border-radius: 5px;
     -fx-font-size: 14px;
-    -fx-selection-bar: #abd5ff;
-    -fx-selection-bar-non-focused: #f5f5f5;
-}
-
-.table-column {
-    -fx-alignment: CENTER;
-    -fx-font-size: 14px;
+    -fx-padding: 10px;
+    -fx-focus-color: #abd5ff;
     -fx-text-fill: #444444;
 }
 
-.table-view .column-header {
-    -fx-background-color: #abd5ff; /* Fondo azul atractivo */
-    -fx-text-fill: white;
+.text-field:focused, .password-field:focused {
+    -fx-border-color: #abd5ff;
 }
 
-.table-view .column-header:focused {
-    -fx-background-color: #abd5ff; /* Color más oscuro al estar enfocado */
-}
-
-.table-view .table-row-cell:hover {
-    -fx-background-color: #f7f7f7; /* Hover con fondo claro */
-}
-
-/* Estilo para los botones de acción */
+/* Estilo para los botones */
 .button {
     -fx-background-color: #abd5ff; /* Azul claro */
     -fx-text-fill: white;
@@ -85,26 +60,32 @@
 }
 
 .button:hover {
-    -fx-background-color: #abd5ff; /* Azul más oscuro al hacer hover */
+    -fx-background-color: #89c5f8; /* Azul más oscuro al hacer hover */
     -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 6, 0.1, 0, 0);
 }
 
+/* Estilo para los enlaces (crear cuenta) */
+.text-link {
+    -fx-font-size: 13px;
+    -fx-font-style: italic;
+    -fx-text-fill: #6a6a6a;
+    -fx-cursor: hand;
+}
+
+.text-link:hover {
+    -fx-text-fill: #abd5ff;
+}
+
 /* Estilo para el área de contenido central */
-.vbox.center {
+.anchor-pane {
     -fx-alignment: center;
 }
 
-.vbox.bottom-right {
-    -fx-alignment: bottom-right;
-}
-
-/* Estilo para los márgenes y separación de elementos */
-.hbox .text {
+.anchor-pane .text {
     -fx-margin-left: 10px;
     -fx-margin-right: 20px;
 }
 
-.vbox .text-title {
-    -fx-padding: 0 0 10px 0;
+.text {
+    -fx-padding: 5px 0;
 }
-

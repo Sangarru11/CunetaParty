@@ -11,7 +11,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: e0eaebe7;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.Sangarru11.CunetaParty.View.UsersRegisterController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: e0eaebe7;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.Sangarru11.CunetaParty.View.RegisterPanelController">
    <left>
       <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
@@ -39,47 +39,37 @@
                   <Image url="@../Imagenes/UserRegister.png" />
                </image>
             </ImageView>
-            <Text layoutX="84.0" layoutY="136.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Usuario">
+            <Text layoutX="82.0" layoutY="164.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Usuario">
                <font>
                   <Font name="System Bold" size="20.0" />
                </font>
             </Text>
-            <Text layoutX="50.0" layoutY="281.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contraseña">
+            <Text layoutX="48.0" layoutY="252.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contraseña">
                <font>
                   <Font name="System Bold" size="20.0" />
                </font>
             </Text>
-            <TextField fx:id="txtUsuario" layoutX="198.0" layoutY="117.0" promptText="Usuario">
+            <TextField fx:id="txtUsername" layoutX="196.0" layoutY="145.0" promptText="Usuario">
                <cursor>
                   <Cursor fx:constant="TEXT" />
                </cursor>
             </TextField>
-            <PasswordField fx:id="txtPassword" layoutX="198.0" layoutY="261.0" promptText="Contraseña">
+            <PasswordField fx:id="txtPassword" layoutX="196.0" layoutY="232.0" promptText="Contraseña">
                <cursor>
                   <Cursor fx:constant="TEXT" />
                </cursor>
             </PasswordField>
-            <Button layoutX="160.0" layoutY="319.0" mnemonicParsing="false" onAction="#Register" style="-fx-background-color: #9aa8ae;" text="Registrarse">
+            <Button layoutX="159.0" layoutY="289.0" mnemonicParsing="false" onAction="#Register" style="-fx-background-color: #9aa8ae;" text="Registrarse">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Text layoutX="118.0" layoutY="181.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DNI">
+            <Text layoutX="116.0" layoutY="209.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DNI">
                <font>
                   <Font name="System Bold" size="20.0" />
                </font>
             </Text>
-            <TextField fx:id="txtDNI" layoutX="198.0" layoutY="161.0" promptText="DNI">
-               <cursor>
-                  <Cursor fx:constant="TEXT" />
-               </cursor>
-            </TextField>
-            <Text layoutX="71.0" layoutY="229.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Telefono">
-               <font>
-                  <Font name="System Bold" size="20.0" />
-               </font>
-            </Text>
-            <TextField fx:id="txtTelefono" layoutX="198.0" layoutY="210.0" promptText="Numero de Telefono">
+            <TextField fx:id="txtDNI" layoutX="196.0" layoutY="189.0" promptText="DNI">
                <cursor>
                   <Cursor fx:constant="TEXT" />
                </cursor>

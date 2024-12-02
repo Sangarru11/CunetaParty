@@ -11,7 +11,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<VBox alignment="TOP_CENTER" prefHeight="680.0" prefWidth="1076.0" spacing="20.0" style="-fx-background-color: grey;" stylesheets="../css/AdminPanel.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.Sangarru11.CunetaParty.View.AdminPanelController">
+<VBox alignment="TOP_CENTER" prefHeight="680.0" prefWidth="1076.0" spacing="20.0" style="-fx-background-color: e0eaebe7;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.Sangarru11.CunetaParty.View.AdminPanelController" >
 
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
@@ -28,7 +28,7 @@
                <children>
                   <HBox fillHeight="false" prefHeight="35.0" prefWidth="164.0">
                      <children>
-                        <ImageView fitHeight="53.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="53.0" fitWidth="52.0" onMouseClicked="#ChangeAddCustomer" pickOnBounds="true" preserveRatio="true">
                            <HBox.margin>
                               <Insets />
                            </HBox.margin>
@@ -39,7 +39,7 @@
                               <Cursor fx:constant="HAND" />
                            </cursor>
                         </ImageView>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Lista de Clientes" wrappingWidth="119.13674926757812">
+                        <Text onMouseClicked="#ChangeAddCustomer" strokeType="OUTSIDE" strokeWidth="0.0" text="Lista de Clientes" wrappingWidth="119.13674926757812">
                            <font>
                               <Font size="20.0" />
                            </font>
@@ -54,7 +54,7 @@
                   </HBox>
                   <HBox prefHeight="100.0" prefWidth="200.0">
                      <children>
-                        <ImageView fitHeight="53.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="53.0" fitWidth="52.0" onMouseClicked="#ChangeAssingRepairs" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../Imagenes/assign.png" />
                            </image>
@@ -62,7 +62,7 @@
                               <Cursor fx:constant="HAND" />
                            </cursor>
                         </ImageView>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Asignar Reparaciones" wrappingWidth="126.80337524414062">
+                        <Text onMouseClicked="#ChangeAssingRepairs" strokeType="OUTSIDE" strokeWidth="0.0" text="Asignar Reparaciones" wrappingWidth="126.80337524414062">
                            <font>
                               <Font size="20.0" />
                            </font>
@@ -77,14 +77,14 @@
                   </HBox>
                </children>
                <HBox.margin>
-                  <Insets left="200.0" />
+                  <Insets left="460.0" />
                </HBox.margin>
             </VBox>
             <VBox prefHeight="150.0" prefWidth="189.0">
                <children>
                   <HBox prefHeight="61.0" prefWidth="181.0">
                      <children>
-                        <ImageView fitHeight="53.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="53.0" fitWidth="52.0" onMouseClicked="#CreateRepair" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../Imagenes/CreateRepair.png" />
                            </image>
@@ -95,7 +95,7 @@
                               <Insets bottom="20.0" />
                            </HBox.margin>
                         </ImageView>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Crear Reparacion" wrappingWidth="100.13674926757812">
+                        <Text onMouseClicked="#CreateRepair" strokeType="OUTSIDE" strokeWidth="0.0" text="Crear Reparacion" wrappingWidth="100.13674926757812">
                            <font>
                               <Font size="20.0" />
                            </font>
@@ -110,7 +110,7 @@
                   </HBox>
                   <HBox prefHeight="100.0" prefWidth="200.0">
                      <children>
-                        <ImageView fitHeight="53.0" fitWidth="52.0"  pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="53.0" fitWidth="52.0" onMouseClicked="#setAdmin" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../Imagenes/Admin.png" />
                            </image>
@@ -118,7 +118,7 @@
                               <Cursor fx:constant="HAND" />
                            </cursor>
                         </ImageView>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Modificar Administradores" wrappingWidth="155.47012329101562">
+                        <Text onMouseClicked="#setAdmin" strokeType="OUTSIDE" strokeWidth="0.0" text="Gestionar Empleados" wrappingWidth="155.47012329101562">
                            <font>
                               <Font size="20.0" />
                            </font>
@@ -137,7 +137,7 @@
             <VBox prefHeight="200.0" prefWidth="350.0" />
             <VBox alignment="CENTER" prefWidth="350.0">
                <children>
-                  <Text fill="WHITE" smooth="false" strokeType="OUTSIDE" strokeWidth="0.0" text="Reparaciones en curso" textAlignment="CENTER">
+                  <Text smooth="false" strokeType="OUTSIDE" strokeWidth="0.0" text="Reparaciones en curso" textAlignment="CENTER">
                      <font>
                         <Font size="29.0" />
                      </font>
@@ -146,7 +146,7 @@
             </VBox>
             <VBox alignment="BOTTOM_RIGHT" prefWidth="350.0">
                <children>
-                  <ImageView fitHeight="70.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="70.0" fitWidth="50.0" onMouseClicked="#deleteRepair" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../Imagenes/Delete.png" />
                      </image>
@@ -170,7 +170,7 @@
       </TableView>
       <HBox alignment="BOTTOM_RIGHT" prefHeight="100.0" prefWidth="200.0">
          <children>
-            <ImageView fitHeight="70.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="70.0" fitWidth="50.0" onMouseClicked="#ReturnToLogin" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../Imagenes/Return.png" />
                </image>

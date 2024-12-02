@@ -51,7 +51,7 @@
     -fx-border-width: 1px;
     -fx-font-family: 'Segoe UI', Tahoma, sans-serif;
     -fx-font-size: 14px;
-    -fx-selection-bar: #abd5ff;
+    -fx-selection-bar: #8fb2d4;
     -fx-selection-bar-non-focused: #f5f5f5;
 }
 
@@ -62,12 +62,12 @@
 }
 
 .table-view .column-header {
-    -fx-background-color: #abd5ff; /* Fondo azul atractivo */
+    -fx-background-color: #8fb2d4; /* Fondo azul atractivo */
     -fx-text-fill: white;
 }
 
 .table-view .column-header:focused {
-    -fx-background-color: #abd5ff; /* Color más oscuro al estar enfocado */
+    -fx-background-color: #8fb2d4; /* Color más oscuro al estar enfocado */
 }
 
 .table-view .table-row-cell:hover {
@@ -76,7 +76,7 @@
 
 /* Estilo para los botones de acción */
 .button {
-    -fx-background-color: #abd5ff; /* Azul claro */
+    -fx-background-color: #8fb2d4; /* Azul claro */
     -fx-text-fill: white;
     -fx-padding: 12px 20px;
     -fx-font-size: 16px;
@@ -85,7 +85,7 @@
 }
 
 .button:hover {
-    -fx-background-color: #abd5ff; /* Azul más oscuro al hacer hover */
+    -fx-background-color: #8fb2d4; /* Azul más oscuro al hacer hover */
     -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 6, 0.1, 0, 0);
 }
 

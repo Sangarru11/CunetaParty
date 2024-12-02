@@ -206,7 +206,7 @@ public class RepairsDAO implements DAO<Repairs,String> {
                     repair.setDescription(rs.getString("description"));
                     repair.setDate(rs.getString("date"));
                     repair.setStatus(rs.getString("status"));
-                    repair.setPlateNumber(rs.getString("plateNumber"));
+                    repair.setPlateNumber(rs.getString("palteNumber"));
                     repairs.add(repair);
                 }
             }
